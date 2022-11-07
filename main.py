@@ -1,3 +1,5 @@
+import time
+
 
 class Attack():
 	def __init__(self):
@@ -174,9 +176,12 @@ print("Zadanie 5 (7)")
 print("Linearna kryptoanalyza")
 print("Pre Sbox: 7fe8354b1dc2a960 ")
 test = Attack()
-#test.read("D:\\FEI\\NKS\\untitled1\\98044.7fe8354b1dc2a960.dat")
-test.read("D:\\FEI\\NKS\\untitled1\\msk_todo['6203', '431c', '1b1e', '23e4', '5613'].dat")
+test.read("D:\\FEI\\NKS\\untitled1\\98044.7fe8354b1dc2a960.dat")
+#test.read("D:\\FEI\\NKS\\untitled1\\msk_todo['6203', '431c', '1b1e', '23e4', '5613'].dat")
+start = time.time()
 test.find_key()
+end = time.time()
+print("Cas utoku: " ,end-start, (end- start)/60, "min")
 
 
 
